@@ -1,14 +1,28 @@
 import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useSwipeable } from "react-swipeable";
 
 import { navRoutes } from '../data.js'
 
 const MIN_SCROLL_DELTA = 25;
 
-function ScrollNavigator({ children, className }) {
+function SmartNavigator({ children, className }) {
   const location = useLocation();
   const navigate = useNavigate();
   const lastScrollTime = useRef(0);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      const currentRouteId = navRoutes.indexOf(location.pathname);
+      navigate(navRoutes[currentRouteId + 1]);
+    },
+    onSwipedRight: () => {
+      const currentRouteId = navRoutes.indexOf(location.pathname);
+      navigate(navRoutes[currentRouteId - 1]);
+    },
+    swipeDuration: 250,
+    preventScrollOnSwipe: true,
+  })
 
   useEffect(() => {
     function onWheel(e) {
@@ -30,10 +44,10 @@ function ScrollNavigator({ children, className }) {
   }, [location.pathname, navigate]);
 
   return (
-    <div className={className}>
+    <div {...handlers} className={className}>
       {children}
     </div>
   );
 }
 
-export default ScrollNavigator;
+export default SmartNavigator;
