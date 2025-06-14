@@ -1,4 +1,4 @@
-import BencheeContributionCard from './components/BencheeContributionCard.jsx';
+import RepoCard from './components/RepoCard.jsx';
 
 function Projects() {
   return (
@@ -9,7 +9,7 @@ function Projects() {
       <h1 className="overviewtitle blueunderline pt-10">Nonetheless</h1>
       <div className="flex flex-col py-5 px-5">
         <p className="pb-1">I did participate in this cool project:</p>
-        <BencheeContributionCard />
+        <RepoCard userName="bencheeorg" repoName="benchee" />
       </div>
     </div>
   );
