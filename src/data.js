@@ -31,4 +31,8 @@ const socials = [
   {name: "Google", username: "javierhm2004@gmail.com", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg", url: "mailto:javierhm2004@gmail.com"},
 ];
 
-export { navRoutes, navbarItems, skills, socials };
+const projects = [
+  {userName: "bencheeorg", repoName: "benchee"},
+];
+
+export { navRoutes, navbarItems, skills, socials, projects };

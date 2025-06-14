@@ -1,5 +1,7 @@
 import RepoCard from './components/RepoCard.jsx';
 
+import { projects } from '../../data.js';
+
 function Projects() {
   return (
     <div className="flex flex-col items-center justify-center">
@@ -9,7 +11,9 @@ function Projects() {
       <h1 className="overviewtitle blueunderline pt-10">Nonetheless</h1>
       <div className="flex flex-col py-5 px-5">
         <p className="pb-1">I did participate in this cool project:</p>
-        <RepoCard userName="bencheeorg" repoName="benchee" />
+        {projects.map((project) => {
+          return <RepoCard userName={project.userName} repoName={project.repoName} />;
+        })}
       </div>
     </div>
   );
