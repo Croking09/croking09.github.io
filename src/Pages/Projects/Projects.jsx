@@ -12,7 +12,7 @@ function Projects() {
       <div className="flex flex-col py-5 px-5">
         <p className="pb-1">I did participate in this cool project:</p>
         {projects.map((project) => {
-          return <RepoCard userName={project.userName} repoName={project.repoName} />;
+          return <RepoCard key={`${project.userName}/${project.repoName}`} userName={project.userName} repoName={project.repoName} />;
         })}
       </div>
     </div>
