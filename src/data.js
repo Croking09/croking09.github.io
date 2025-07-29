@@ -24,6 +24,7 @@ const skills = [
   {name: "JetBrainsIDE", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetbrains/jetbrains-original.svg", url: "https://www.jetbrains.com/"},
   {name: "VSCode", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg", url: "https://code.visualstudio.com/"},
   {name: "UML", category: "Tools", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unifiedmodelinglanguage/unifiedmodelinglanguage-original.svg", url: "https://www.uml.org/"},
+  {name: "TypeScript", category: "Frontend", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg", url: "https://www.typescriptlang.org/"},
 ];
 
 const socials = [
