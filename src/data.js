@@ -32,8 +32,12 @@ const socials = [
   {name: "Google", username: "javierhm2004@gmail.com", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg", url: "mailto:javierhm2004@gmail.com"},
 ];
 
-const projects = [
+const ownProjects = [
+  {userName: "Croking09", repoName: "markdown-editor"},
+];
+
+const collaborations = [
   {userName: "bencheeorg", repoName: "benchee"},
 ];
 
-export { navRoutes, navbarItems, skills, socials, projects };
+export { navRoutes, navbarItems, skills, socials, ownProjects, collaborations };

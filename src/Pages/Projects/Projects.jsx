@@ -1,17 +1,20 @@
 import RepoCard from './components/RepoCard.jsx';
 
-import { projects } from '../../data.js';
+import { ownProjects, collaborations } from '../../data.js';
 
 function Projects() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="overviewtitle pb-3">404 :(</h1>
-      <p className="text-center">I haven't completed any noteworthy projects (yet).</p>
+      <h1 className="overviewtitle blueunderline">Own Projects</h1>
+      <div className="flex gap-3 py-5 px-5">
+        {ownProjects.map((project) => {
+          return <RepoCard key={`${project.userName}/${project.repoName}`} userName={project.userName} repoName={project.repoName} />;
+        })}
+      </div>
 
-      <h1 className="overviewtitle blueunderline pt-10">Nonetheless</h1>
-      <div className="flex flex-col py-5 px-5">
-        <p className="pb-1">I did participate in this cool project:</p>
-        {projects.map((project) => {
+      <h1 className="overviewtitle blueunderline pt-10">Collaborations</h1>
+      <div className="flex gap-3 py-5 px-5">
+        {collaborations.map((project) => {
           return <RepoCard key={`${project.userName}/${project.repoName}`} userName={project.userName} repoName={project.repoName} />;
         })}
       </div>
