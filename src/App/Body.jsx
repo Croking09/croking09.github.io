@@ -11,7 +11,7 @@ function Body() {
   const location = useLocation();
 
   return (
-    <div className="pt-30 flex-grow">
+    <div className="pt-30 flex-grow z-10">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<FadeInWrapper><Overview /></FadeInWrapper>} />
