@@ -8,13 +8,24 @@ function Navbar({ className = '' }) {
   const location = useLocation();
   const [bubbleStyle, setBubbleStyle] = useState({});
   const itemRefs = useRef([]);
+  const navRef = useRef(null)
 
   useEffect(() => {
     const itemId = items.findIndex(item => item.route === location.pathname);
-    if (itemRefs.current[itemId]) {
+    if (itemRefs.current[itemId] && navRef.current) {
       const element = itemRefs.current[itemId];
+      const nav = navRef.current;
+      
+      let relativeLeft = 0;
+      let currentElement = element;
+      
+      while (currentElement && currentElement !== nav) {
+        relativeLeft += currentElement.offsetLeft;
+        currentElement = currentElement.offsetParent;
+      }
+      
       setBubbleStyle({
-        left: element.offsetLeft,
+        left: relativeLeft,
         width: element.offsetWidth,
       });
     }
@@ -22,15 +33,18 @@ function Navbar({ className = '' }) {
 
   return (
     <div className={className}>
-      <nav className='bg-navbar-bg rounded-full px-2 py-3 text-navbar-text font-bold relative overflow-visible'>
+      <nav 
+        ref={navRef}
+        className='bg-navbar-bg rounded-full px-2 py-3 text-navbar-text font-bold relative overflow-visible'
+      >
+        <div
+          className="absolute top-1/2 -translate-y-1/2 h-8 bg-white/8 rounded-full transition-[left,width] duration-400 z-0"
+          style={{
+            ...bubbleStyle,
+            pointerEvents: "none",
+          }}
+        />
         <ul className='flex items-center space-x-1 relative'>
-          <div
-            className="absolute top-1/2 -translate-y-1/2 h-8 bg-white/8 rounded-full transition-[left,width] duration-400 z-0"
-            style={{
-              ...bubbleStyle,
-              pointerEvents: "none",
-            }}
-          />
           {items.map((item, index) => (
             <li
               key={index}
