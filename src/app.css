@@ -1,55 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@import "./styles/overview.css";
+@import "./styles/skills.css";
+@import "./styles/navbar.css";
 
 @theme {
   --color-navbar-bg: #252528;
   --color-navbar-text: #8b8b94;
   --color-udc: #e11783;
 
-  --font-inter: 'Inter', sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
-@layer components {
-  .navbaritem {
-    @apply hover:text-gray-300 transition-colors;
-  }
+.title {
+  @apply text-5xl font-bold pb-0.5;
+}
 
-  .overviewtitle {
-    @apply text-5xl font-bold pb-0.5;
-  }
-
-  .blueunderline {
-    @apply border-b-3 border-blue-500;
-  }
-
-  .overviewyear {
-    @apply text-blue-500 font-bold text-xl w-20 inline-block shrink-0;
-  }
-
-  .overviewli {
-    @apply flex justify-start text-xl pt-3 px-2
-  }
-
-  .breath-hover {
-    transition: transform 0.3s;
-  }
-  .breath-hover:hover {
-    animation: breath 1.2s infinite alternate;
-    animation-timing-function: ease-in-out;
-  }
-
-  @keyframes breath {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.15);
-    }
-  }
-
-  .skillslayoutmobile {
-    @apply flex flex-col items-center gap-10 pb-10;
-  }
+.blueunderline {
+  @apply border-b-3 border-blue-500;
 }
 
 /* Plus darker */

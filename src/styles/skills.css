@@ -1,0 +1,22 @@
+@layer components {
+  .breath-hover {
+    transition: transform 0.3s;
+  }
+
+  .breath-hover:hover {
+    animation: breath 1.2s infinite alternate ease-in-out;
+  }
+
+  @keyframes breath {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+
+  .skillslayoutmobile {
+    @apply flex flex-col items-center gap-10 pb-10;
+  }
+}

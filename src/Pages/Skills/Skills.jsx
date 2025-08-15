@@ -1,4 +1,4 @@
-import SkillSection from './components/SkillSection.jsx'
+import SkillSection from "./components/SkillSection.jsx";
 
 function Skills() {
   return (
