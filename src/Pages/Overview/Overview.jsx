@@ -1,15 +1,10 @@
 import ScrollIndicator from "./components/ScrollIndicator";
-
-import profileImg from "../../assets/profile.jpg";
+import ProfileImg from "./components/ProfileImg";
 
 function Overview() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <img
-        src={profileImg}
-        alt="Profile"
-        className="w-60 h-60 rounded-full object-cover mb-2 shadow-lg"
-      />
+      <ProfileImg />
 
       <h1 className="title blueunderline">Who am I</h1>
       <div className="pt-3 text-center px-2">
