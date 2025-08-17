@@ -1,6 +1,6 @@
 import RepoCard from "./components/RepoCard.jsx";
 
-import { ownProjects, collaborations } from "../../data.js";
+import { ownProjects, collaborations as contributions } from "../../data.js";
 
 function Projects() {
   return (
@@ -18,9 +18,9 @@ function Projects() {
         })}
       </div>
 
-      <h1 className="title blueunderline pt-10">Collaborations</h1>
+      <h1 className="title blueunderline pt-10">Contributions</h1>
       <div className="flex gap-3 py-5 px-5">
-        {collaborations.map((project) => {
+        {contributions.map((project) => {
           return (
             <RepoCard
               key={`${project.userName}/${project.repoName}`}
