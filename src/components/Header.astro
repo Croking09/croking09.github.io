@@ -1,0 +1,52 @@
+---
+import NavBar from "@/components/NavBar.astro";
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.webp";
+---
+
+<header class="w-full flex flex-row items-center justify-between">
+  <div class="flex flex-row items-center gap-x-2 pl-8">
+    <Image
+      src={logo}
+      alt="Logo de desarrollador"
+      class="h-10 w-10"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <span id="typewriter" class="text-xl font-medium"></span>
+  </div>
+
+  <NavBar />
+</header>
+
+<script>
+  const texts = ["Javier HM", "Desarrollador"];
+  let index = 0;
+  let charIndex = 0;
+  const speed = 100;
+  const pause = 1000;
+  const el = document.getElementById("typewriter")!;
+
+  function type() {
+    if (charIndex < texts[index].length) {
+      el.textContent += texts[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(erase, pause);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      el.textContent = texts[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, speed / 2);
+    } else {
+      index = (index + 1) % texts.length;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+</script>

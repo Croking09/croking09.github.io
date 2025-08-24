@@ -1,28 +1,42 @@
 ---
-import '@/styles/global.css';
+import "@/styles/global.css";
+import "@fontsource-variable/inter";
+
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon96.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Javier HM - Developer</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="16x16"
+      href="/favicon/favicon16.webp"
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="32x32"
+      href="/favicon/favicon32.webp"
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="96x96"
+      href="/favicon/favicon96.webp"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Javier HM - Developer</title>
+  </head>
+  <body class="flex flex-col items-center pt-8 gap-y-8">
+    <Header />
+    <main class="flex-grow animate-slide-in-bottom">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

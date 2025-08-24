@@ -1,0 +1,18 @@
+---
+import profileImg from "@/assets/profile.webp";
+import { Image } from "astro:assets";
+---
+
+<div class="relative">
+  <Image
+    src={profileImg}
+    alt="Foto de perfil de Javier"
+    class="w-60 h-60 rounded-full object-cover mb-2 shadow-lg border-white border-4 border-solid"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div
+    class="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-green-500 border-6 border-bg"
+  >
+  </div>
+</div>

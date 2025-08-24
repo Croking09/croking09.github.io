@@ -1,0 +1,7 @@
+.overviewli {
+  @apply flex items-start font-medium text-lg pt-3;
+}
+
+.overviewyear {
+  @apply text-blue-500 text-right font-bold text-xl w-24 flex-shrink-0 pr-5;
+}
