@@ -1,0 +1,23 @@
+---
+import type { Socials } from "@/types";
+
+export interface Props {
+  social: Socials;
+}
+
+const { social } = Astro.props;
+const { id, name, username, url, logo: Logo } = social;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" aria-label={name}>
+  <article
+    class="flex flex-row items-center gap-x-2 group techPill bg-navbar-bg hover:bg-white hover:scale-120 transition-all"
+  >
+    <Logo class="w-6 h-6 group-hover:text-black" />
+    {
+      id === "mail" ? (
+        <span class="group-hover:text-black">{username}</span>
+      ) : null
+    }
+  </article>
+</a>

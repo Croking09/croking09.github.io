@@ -1,23 +1,31 @@
 ---
 import ProfilePic from "./ProfilePic.astro";
+import SocialPill from "./SocialPill.astro";
+import { socials } from "@/data/socials";
 ---
 
 <section
   id="overview"
-  class="flex flex-col items-center justify-center max-w-2xl"
+  class="flex flex-col items-center justify-center max-w-3xl"
 >
-  <ProfilePic />
+  <div class="flex flex-row items-center gap-x-5">
+    <ProfilePic />
 
-  <h2 class="title blueunderline pt-2">Sobre mí</h2>
-  <div class="pt-3 text-center px-2">
-    <p class="font-medium text-lg text-pretty">
-      Soy <strong>Javier Hernández Martínez</strong>, un (futuro) ingeniero de
-      software y desarrollador Full Stack.<br />Estudio Ingeniería Informática
-      en la <a
-        href="https://udc.es/"
-        class="text-udc underline visited:text-udc">Universidad de A Coruña</a
-      >.
-    </p>
+    <div class="pt-3 text-center px-2">
+      <h2 class="title blueunderline pt-2 inline-block">Sobre mí</h2>
+      <p class="font-medium text-lg text-pretty pt-3">
+        Soy <strong>Javier Hernández Martínez</strong>, un (futuro) ingeniero de
+        software y desarrollador Full Stack.<br />Estudio Ingeniería Informática
+        en la <a
+          href="https://udc.es/"
+          class="text-udc underline visited:text-udc">Universidad de A Coruña</a
+        >.
+      </p>
+
+      <section class="flex flex-row items-center justify-end gap-x-7 pt-3">
+        {socials.map((item) => <SocialPill social={item} />)}
+      </section>
+    </div>
   </div>
 
   <h2 class="title blueunderline pt-10">Cronología</h2>

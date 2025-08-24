@@ -1,3 +1,6 @@
+import type { ImageMetadata } from "astro";
+import type { JSX } from "astro/jsx-runtime";
+
 export interface NavbarItem {
   id: string;
   label: string;
@@ -20,4 +23,12 @@ export interface Project {
   techStack: Technology["id"][];
   url: string;
   image: ImageMetadata;
+}
+
+export interface Socials {
+  id: string;
+  name: string;
+  username: string;
+  url: string;
+  logo: JSX.Element;
 }
