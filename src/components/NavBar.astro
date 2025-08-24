@@ -3,7 +3,7 @@ import { navbarItems } from "@/data/navbar.ts";
 ---
 
 <nav
-  class="fixed left-1/2 -translate-x-1/2 bg-navbar-bg rounded-full p-3 text-navbar-text font-bold z-9999"
+  class="fixed left-1/2 -translate-x-1/2 bg-navbar-bg rounded-full py-3 px-4 text-navbar-text font-bold z-9999"
 >
   <ul class="flex flex-row gap-x-3 items-center justifiy-center">
     {
@@ -15,3 +15,29 @@ import { navbarItems } from "@/data/navbar.ts";
     }
   </ul>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => link.classList.remove("active"));
+            const activeLink = document.querySelector(
+              `nav ul li a[href="#${entry.target.id}"]`
+            );
+            if (activeLink) activeLink.classList.add("active");
+          }
+        });
+      },
+      {
+        threshold: 0.8,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>
