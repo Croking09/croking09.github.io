@@ -1,7 +1,0 @@
-.overviewyear {
-  @apply text-blue-500 font-bold text-xl w-20 inline-block shrink-0;
-}
-
-.overviewli {
-  @apply flex justify-start text-xl pt-3 px-2;
-}
