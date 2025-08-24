@@ -34,3 +34,7 @@ body {
     animation: none;
   }
 }
+
+.techPill {
+  @apply text-white px-3 py-1 rounded-2xl text-xs font-medium border-[1px] border-solid;
+}

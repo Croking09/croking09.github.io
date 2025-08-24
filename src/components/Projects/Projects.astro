@@ -1,1 +1,13 @@
-<section></section>
+---
+import ProjectCard from "./ProjectCard.astro";
+
+import { projects } from "@/data/projects";
+---
+
+<section
+  id="projects"
+  class="flex flex-col items-center justify-center max-w-2xl pt-10"
+>
+  <h2 class="title blueunderline pt-2 mb-3">Proyectos</h2>
+  {projects.map((item) => <ProjectCard project={item} />)}
+</section>

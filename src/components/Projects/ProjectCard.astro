@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import type { Project } from "@/types";
+import { technologies } from "@/data/technologies";
+
+export interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { title, description, techStack, url, image } = project;
+
+function getTechById(techId: string) {
+  return technologies.find((tech) => tech.id === techId);
+}
+---
+
+<article class="bg-navbar-bg rounded-xl overflow-hidden max-w-sm w-full">
+  <Image src={image} alt=`Vista previa de ${title}` />
+
+  <div class="p-6">
+    <div class="flex flex-row items-center gap-x-3">
+      <h3 class="text-white text-xl font-bold mb-2">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline">{title}</a
+        >
+      </h3>
+    </div>
+    <p class="text-gray-300 text-sm mb-4">
+      {description}
+    </p>
+
+    <div class="flex flex-wrap gap-2">
+      {
+        techStack.map((techId) => {
+          const tech = getTechById(techId);
+          return (
+            tech && (
+              <div
+                class="flex flex-row gap-x-2 techPill"
+                style={`border-color: ${tech.color}; background-color: ${tech.color}20`}
+              >
+                <Image
+                  src={tech.logo}
+                  alt={`Logo de ${tech.name}`}
+                  class="w-4 h-4"
+                  loading="lazy"
+                />
+                <span>{tech.name}</span>
+              </div>
+            )
+          );
+        })
+      }
+    </div>
+  </div>
+</article>
