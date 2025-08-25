@@ -8,10 +8,10 @@ import { socials } from "@/data/socials";
   id="overview"
   class="flex flex-col items-center justify-center max-w-3xl"
 >
-  <div class="flex flex-row items-center gap-x-5">
+  <article class="flex flex-row items-center gap-x-5">
     <ProfilePic />
 
-    <div class="pt-3 text-center px-2">
+    <div class="text-center px-2">
       <h2 class="title blueunderline pt-2 inline-block">Sobre mí</h2>
       <p class="font-medium text-lg text-pretty pt-3">
         Soy <strong>Javier Hernández Martínez</strong>, un (futuro) ingeniero de
@@ -26,29 +26,31 @@ import { socials } from "@/data/socials";
         {socials.map((item) => <SocialPill social={item} />)}
       </section>
     </div>
-  </div>
+  </article>
 
-  <h2 class="title blueunderline pt-10">Cronología</h2>
-  <ul>
-    <li class="overviewli">
-      <span class="overviewyear">Hoy</span>
-      <span>Sigo aprendiendo y desarrollando nuevas aplicaciones.</span>
-    </li>
+  <article class="flex flex-col items-center gap-y-3">
+    <h2 class="title blueunderline pt-10 inline-block">Cronología</h2>
+    <ul>
+      <li class="overviewli">
+        <span class="overviewyear">Hoy</span>
+        <span>Sigo aprendiendo y desarrollando nuevas aplicaciones.</span>
+      </li>
 
-    <li class="overviewli">
-      <span class="overviewyear">2025</span>
-      <span
-        >Empecé a aprender sobre desarrollo de software y a especializarme.
-        Aprendí manejo de BD, Frontend y muchos más conceptos importantes.</span
-      >
-    </li>
+      <li class="overviewli">
+        <span class="overviewyear">2025</span>
+        <span
+          >Empecé a aprender sobre desarrollo de software y a especializarme.
+          Aprendí manejo de BD, Frontend y muchos más conceptos importantes.</span
+        >
+      </li>
 
-    <li class="overviewli">
-      <span class="overviewyear">2022</span>
-      <span
-        >Comencé en el mundo de la informática. Aprendiendo C, Java, Python y lo
-        básico de la programación.</span
-      >
-    </li>
-  </ul>
+      <li class="overviewli">
+        <span class="overviewyear">2022</span>
+        <span
+          >Comencé en el mundo de la informática. Aprendiendo C, Java, Python y
+          lo básico de la programación.</span
+        >
+      </li>
+    </ul>
+  </article>
 </section>
