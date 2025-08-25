@@ -27,6 +27,10 @@ body {
   @apply text-5xl font-bold pb-0.5;
 }
 
+.subtitle {
+  @apply text-4xl font-medium pb-0.5;
+}
+
 .blueunderline {
   @apply border-b-3 border-blue-500;
 }
