@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.6",
@@ -15,5 +17,8 @@
     "astro": "^5.13.3",
     "astro-sitemap": "^1.0.0",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
