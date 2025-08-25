@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: croking09.github.io/sitemap-index.xml
+Sitemap: https://croking09.github.io/sitemap-index.xml
