@@ -2,36 +2,17 @@
 import "@/styles/global.css";
 import "@fontsource-variable/inter";
 
+import SEO from "@/components/SEO.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      type="image/webp"
-      sizes="16x16"
-      href="/favicon/favicon16.webp"
-    />
-    <link
-      rel="icon"
-      type="image/webp"
-      sizes="32x32"
-      href="/favicon/favicon32.webp"
-    />
-    <link
-      rel="icon"
-      type="image/webp"
-      sizes="96x96"
-      href="/favicon/favicon96.webp"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>Javier HM - Developer</title>
-  </head>
+  <SEO
+    title="Javier HM - Desarrollador Full Stack"
+    description="Portafolio de Javier Hernández Martínez, explora mis proyectos y habilidades."
+  />
   <body
     class="flex flex-col items-center pt-15 lg:pt-8 pb-3 gap-y-15 lg:gap-y-8 px-3"
   >

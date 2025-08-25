@@ -1,0 +1,57 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  url?: string;
+  image?: string;
+  keywords?: string;
+}
+const {
+  title,
+  description,
+  url = "croking09.github.io",
+  image = "/preview.png",
+  keywords = "desarrollador, frontend, portfolio, developer, backend, fullstack",
+} = Astro.props;
+---
+
+<head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content="Javier Hernández Martínez" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={image} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <link
+    rel="icon"
+    type="image/webp"
+    sizes="16x16"
+    href="/favicon/favicon16.webp"
+  />
+  <link
+    rel="icon"
+    type="image/webp"
+    sizes="32x32"
+    href="/favicon/favicon32.webp"
+  />
+  <link
+    rel="icon"
+    type="image/webp"
+    sizes="96x96"
+    href="/favicon/favicon96.webp"
+  />
+</head>
