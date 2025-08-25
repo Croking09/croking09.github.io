@@ -1,26 +1,18 @@
-# Welcome to My Personal Portfolio 👋
+# Bienvenido a Mi Portafolio 👋
 
-Hi there!  
-This is my personal portfolio where you can learn more **about me**, explore **my projects**, and discover what I’m passionate about.
-
----
-
-## What You’ll Find Here
-
-- 👨‍💻 **About Me:** Who I am and what I do  
-- 🚀 **Projects:** Some of the work I’m proud of  
-- 🎯 **Interests:** Things I enjoy working on and learning
-
-Feel free to explore and get in touch!
+¡Hola!
+Este es mi portafolio personal donde puedes conocer más **sobre mí**, explorar **mis proyectos** y descubrir qué es lo que me apasiona.
 
 ---
 
-## Resources
+## Qué Encontrarás Aquí
 
-- Background patterns from [Hero Patterns](https://heropatterns.com/)  
-- Icons provided by [Icons8](https://icons8.com/icons/set/dev)
+* 👨‍💻 **Sobre Mí:** Quién soy y a qué me dedico
+* 🚀 **Proyectos:** Algunos de los trabajos de los que estoy orgulloso
+* 🎯 **Habilidades:** Tecnologías o herramientas que se usar
+
+¡Siéntete libre de explorar y ponerte en contacto!
 
 ---
 
-Thanks for stopping by!  
-Enjoy browsing! 🌟
+¡Gracias por visitar!
