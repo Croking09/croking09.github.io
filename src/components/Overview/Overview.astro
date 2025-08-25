@@ -8,7 +8,7 @@ import { socials } from "@/data/socials";
   id="overview"
   class="flex flex-col gap-y-10 items-center justify-center max-w-3xl"
 >
-  <article class="flex flex-row items-center gap-x-5">
+  <article class="flex flex-col lg:flex-row items-center gap-x-5">
     <ProfilePic />
 
     <div class="text-center px-2">
@@ -22,7 +22,9 @@ import { socials } from "@/data/socials";
         >.
       </p>
 
-      <section class="flex flex-row items-center justify-end gap-x-7 pt-3">
+      <section
+        class="flex flex-row items-center justify-center lg:justify-end gap-x-7 pt-3"
+      >
         {socials.map((item) => <SocialPill social={item} />)}
       </section>
     </div>
