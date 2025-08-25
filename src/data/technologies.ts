@@ -94,7 +94,7 @@ export const technologies: Technology[] = [
   {
     id: "gh",
     name: "GitHub",
-    color: "#181717",
+    color: "#6366F1",
     logo: ghImg,
     category: "Tool",
   },
@@ -115,7 +115,7 @@ export const technologies: Technology[] = [
   {
     id: "jetbrainside",
     name: "JetBrainsIDE",
-    color: "#000000",
+    color: "#FF6B35",
     logo: jetbrainsideImg,
     category: "Tool",
   },

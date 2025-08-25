@@ -1,1 +1,11 @@
-<section></section>
+---
+import { technologies } from "@/data/technologies";
+import SkillIcon from "./SkillIcon.astro";
+---
+
+<section id="skills" class="flex flex-col items-center gap-y-10 max-w-2xl">
+  <h2 class="title blueunderline inline-block">Habilidades</h2>
+  <div class="flex flex-wrap justify-center gap-x-7 gap-y-10">
+    {technologies.map((item) => <SkillIcon item={item} />)}
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import type { Technology } from "@/types";
+
+export interface Props {
+  item: Technology;
+}
+
+const { item } = Astro.props;
+const { id, name, logo, color } = item;
+---
+
+<div
+  class="group relative techPill hover:animate-[pulsing_2s_infinite] flex flex-row items-center gap-x-1"
+  style={`border-color: ${color}; background-color: ${color}20; box-shadow: 0 0 10px ${color}55;`}
+>
+  <Image src={logo} alt={`Logo de ${name}`} class="w-10 h-10 p-1" />
+  <span
+    class="absolute left-1/2 -translate-x-1/2 -top-6 whitespace-nowrap opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+    style={`color: ${color}; text-shadow: 0 0 5px ${color}, 0 0 10px ${color}55;`}
+  >
+    {name}
+  </span>
+</div>
