@@ -1,14 +1,12 @@
 {
-  "name": "astrop",
+  "name": "astro-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.6",
@@ -17,8 +15,5 @@
     "astro": "^5.13.3",
     "astro-sitemap": "^1.0.0",
     "tailwindcss": "^4.1.12"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
