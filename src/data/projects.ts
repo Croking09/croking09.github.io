@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "Croking Paste",
     description: "Clon de PokePaste con FireBase.",
     techStack: ["react", "vite", "tailwindcss", "firebase"],
-    url: "https://github.com/Croking09/croking-paste/",
+    url: "https://croking09.github.io/croking-paste/",
     image: crokingPasteImg,
   },
 ];
