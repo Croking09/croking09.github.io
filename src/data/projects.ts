@@ -1,6 +1,7 @@
 import type { Project } from "@/types";
 
 import mdEditorImg from "@/assets/projects/markdown-editor.webp";
+import crokingPasteImg from "@/assets/projects/croking-paste.webp";
 
 export const projects: Project[] = [
   {
@@ -10,5 +11,13 @@ export const projects: Project[] = [
     techStack: ["react", "vite", "ts", "tailwindcss"],
     url: "https://croking09.github.io/markdown-editor/",
     image: mdEditorImg,
+  },
+  {
+    id: "croking-paste",
+    title: "Croking Paste",
+    description: "Clon de PokePaste con FireBase.",
+    techStack: ["react", "vite", "tailwindcss", "firebase"],
+    url: "https://github.com/Croking09/croking-paste/",
+    image: crokingPasteImg,
   },
 ];

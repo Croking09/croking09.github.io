@@ -19,6 +19,7 @@ import umlImg from "@/assets/logos/uml.svg";
 import tsImg from "@/assets/logos/ts.svg";
 import astroImg from "@/assets/logos/astro.svg";
 import viteImg from "@/assets/logos/vite.svg";
+import firebaseImg from "@/assets/logos/firebase.svg";
 
 export const technologies: Technology[] = [
   {
@@ -153,5 +154,12 @@ export const technologies: Technology[] = [
     color: "#646CFF",
     logo: viteImg,
     category: "Frontend",
+  },
+  {
+    id: "firebase",
+    name: "Firebase",
+    color: "#FF8F00",
+    logo: firebaseImg,
+    category: "Backend",
   },
 ];

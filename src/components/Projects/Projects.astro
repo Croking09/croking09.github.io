@@ -6,8 +6,10 @@ import { projects } from "@/data/projects";
 
 <section
   id="projects"
-  class="flex flex-col items-center justify-center gap-y-10 max-w-2xl"
+  class="flex flex-col items-center justify-center gap-y-10"
 >
   <h2 class="title blueunderline">Proyectos</h2>
-  {projects.map((item) => <ProjectCard project={item} />)}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    {projects.map((item) => <ProjectCard project={item} />)}
+  </div>
 </section>
