@@ -2,8 +2,17 @@ import type { Project } from "@/types";
 
 import mdEditorImg from "@/assets/projects/markdown-editor.webp";
 import crokingPasteImg from "@/assets/projects/croking-paste.webp";
+import padelInRioImg from "@/assets/projects/padel-in-rio.webp";
 
 export const projects: Project[] = [
+  {
+    id: "padel-in-rio",
+    title: "Padel in Rio Web",
+    description: "Página oficial del club de padel Padel in Rio.",
+    techStack: ["nextjs", "supabase", "ts", "tailwindcss"],
+    url: "https://github.com/Croking09/padel-in-rio-web/",
+    image: padelInRioImg,
+  },
   {
     id: "md-editor",
     title: "Markdown Editor",
@@ -15,7 +24,7 @@ export const projects: Project[] = [
   {
     id: "croking-paste",
     title: "Croking Paste",
-    description: "Clon de PokePaste con FireBase.",
+    description: "Clon de PokePaste con Firebase.",
     techStack: ["react", "vite", "tailwindcss", "firebase"],
     url: "https://croking09.github.io/croking-paste/",
     image: crokingPasteImg,

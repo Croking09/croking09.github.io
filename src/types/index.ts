@@ -12,7 +12,7 @@ export interface Technology {
   id: string;
   name: string;
   color: string;
-  logo: ImageMetadata;
+  logo: string;
   category: TechnologyCategory;
 }
 
@@ -30,5 +30,5 @@ export interface Socials {
   name: string;
   username: string;
   url: string;
-  logo: JSX.Element;
+  logo: string;
 }

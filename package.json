@@ -10,9 +10,14 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.6",
+    "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/logos": "^1.2.11",
+    "@iconify-json/material-icon-theme": "^1.2.58",
+    "@iconify-json/simple-icons": "^1.2.78",
     "@midudev/tailwind-animations": "^0.2.0",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.3",
+    "astro-icon": "^1.1.5",
     "astro-sitemap": "^1.0.0",
     "tailwindcss": "^4.1.12"
   }

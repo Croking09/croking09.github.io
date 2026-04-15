@@ -1,23 +1,24 @@
 ---
 import type { Socials } from "@/types";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   social: Socials;
 }
 
 const { social } = Astro.props;
-const { id, name, username, url, logo: Logo } = social;
+const { id, name, username, url, logo } = social;
 ---
 
 <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name}>
   <article
-    class="flex flex-row items-center gap-x-2 group techPill bg-navbar-bg hover:bg-white hover:scale-120 transition-all"
+    class="flex flex-row items-center gap-x-2 group techPill bg-navbar-bg hover:bg-white hover:scale-105 transition-all"
   >
-    <Logo class="w-6 h-6 group-hover:text-black" />
-    {
-      id === "mail" ? (
-        <span class="group-hover:text-black">{username}</span>
-      ) : null
-    }
+    <Icon
+      name={logo}
+      class="w-7 h-7 transition-colors group-hover:text-black"
+    />
+
+    {id === "mail" && <span class="group-hover:text-black">{username}</span>}
   </article>
 </a>
