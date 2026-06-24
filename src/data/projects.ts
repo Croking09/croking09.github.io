@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "Markdown Editor",
     description: "Editor de Markdown PWA multiplataforma.",
     techStack: ["react", "vite", "ts", "tailwindcss"],
-    url: "https://croking09.github.io/markdown-editor/",
+    url: "https://github.com/Croking09/markdown-editor",
     image: mdEditorImg,
   },
   {
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Croking Paste",
     description: "Clon de PokePaste con Firebase.",
     techStack: ["react", "vite", "tailwindcss", "firebase"],
-    url: "https://croking09.github.io/croking-paste/",
+    url: "https://github.com/Croking09/croking-paste",
     image: crokingPasteImg,
   },
 ];
